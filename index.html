@@ -106,17 +106,16 @@
 <body>
   <div id="hearts"></div>
   
-  <div class="container" id="question-container">
-    <img src="goma-goma-cat 1.gif" alt="">
-    <h1>I LOVE YOU ❤️</h1>
-    <h1>DO YOU LOVE ME ❤️?</h1>
-    <p id="messagesText"></p>
-    <div class="btn-group">
-      <button id="yes">Yes</button>
-      <button id="no">No</button>
-    </div>
+    <div class="container" id="question-container">
+      <img src="goma-goma-cat 1.gif" alt="">
+      <h1>I LOVE YOU ❤️</h1>
+      <h1>DO YOU LOVE ME ❤️?</h1>
+      <p id="messagesText"></p>
+      <div class="btn-group">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
   </div>
-
 
   <script>
     let noCount = 0;
@@ -139,13 +138,15 @@
       heart.classList.add('heart');
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      const text = document.createElement('p');
+    text.innerText = "ស្រលាញ់អ្នកណាស់! ❤️"; // Text you want to display
+    ហeart.appendChild(text);
       document.getElementById('hearts').appendChild(heart);
       setTimeout(() => {
         heart.remove();
       }, 6000);
     }
     setInterval(createHeart, 400);
-
     function rejectlove() {
       if (noCount < messages.length) {
         messagesText.innerHTML = messages[noCount];
@@ -168,5 +169,6 @@
     document.getElementById("yes").addEventListener("click", acceptlove);
     document.getElementById("no").addEventListener("click", rejectlove);
   </script>
+    
 </body>
 </html>
