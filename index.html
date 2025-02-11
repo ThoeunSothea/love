@@ -116,7 +116,6 @@
         <button id="no">No</button>
       </div>
   </div>
-
   <script>
     let noCount = 0;
     let messages = [
@@ -140,7 +139,7 @@
       heart.style.animationDuration = 3 + Math.random() * 3 + 's';
       const text = document.createElement('p');
     text.innerText = "ស្រលាញ់អ្នកណាស់! ❤️"; // Text you want to display
-    ហeart.appendChild(text);
+    heart.appendChild(text);
       document.getElementById('hearts').appendChild(heart);
       setTimeout(() => {
         heart.remove();
