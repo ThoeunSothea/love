@@ -116,7 +116,8 @@
       <button id="no">No</button>
     </div>
   </div>
-  
+
+
   <script>
     let noCount = 0;
     let messages = [
@@ -143,7 +144,7 @@
         heart.remove();
       }, 6000);
     }
-    setInterval(createHeart, 500);
+    setInterval(createHeart, 400);
 
     function rejectlove() {
       if (noCount < messages.length) {
